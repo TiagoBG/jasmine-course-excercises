@@ -22,7 +22,7 @@ Calculator.prototype.add = function (number) {
  * @param {number} number
  * @returns {*}
  */
-Calculator.prototype.subtract = function (number) {
+Calculator.prototype.substract = function (number) {
   return this.total -= number;
 };
 
