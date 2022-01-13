@@ -107,5 +107,33 @@ describe('calculator.js', function() {
         expect(calculator.total).toBe(100);
       });
     });
+
+    /* ACÁ SE USA EL DONE() PARA QUE LA PROMESA NO QUEDE VIVA SINO QUE HAGA EL TEST CON 
+    LA PROMESA EJECUTADA. 
+    EL MÉTODO FETCH SE ESPIA COMO UN MÉTODO DEL OBJETO WINDOW, ADEMÁS AUNQUE SE ESPIE, SE
+    RECOMIENDA USAR EL DONE()*/
+    describe('get version', ()=>{
+      it('fetches version from external source', (done)=>{
+        spyOn(window, 'fetch').and.returnValue(Promise.resolve(
+          new Response('{ "version": "0.1"}')
+        ));
+      
+          calculator.version.then((version)=>{
+            expect(version).toBe('0.1');
+            done();
+          });
+      });
+
+          /* USANDO ASYNC AWAIT */
+          it('fetches version from external source with async', async ()=>{
+            spyOn(window, 'fetch').and.returnValue(Promise.resolve(
+              new Response('{ "version": "0.1"}')
+            ));          
+            
+            const version = await calculator.version
+
+            expect(version).toBe('0.1');    
+          });
+    });
   });
 });

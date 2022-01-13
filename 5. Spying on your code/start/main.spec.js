@@ -166,7 +166,7 @@ describe('main.js', function() {
 
       expect(spy).toHaveBeenCalled();
 
-      /* OTRA FORMA ES USANDO EN VEZ DE SPY --> 
+      /* OTRA FORMA DE ACCEDER AL GET ES USANDO EN VEZ DE SPY --> 
       Object.getOwnPropertyDescriptor(Calculator.prototype, 'version').get */
     });
   })

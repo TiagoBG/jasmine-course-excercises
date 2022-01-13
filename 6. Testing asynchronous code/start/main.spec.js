@@ -149,11 +149,13 @@ describe('main.js', function () {
         innerText: null
       });
 
-      const spy = spyOnProperty(Calculator.prototype, 'version', 'get');
+      const spy = spyOnProperty(Calculator.prototype, 'version', 'get').and.returnValue(
+        Promise.resolve());
 
       showVersion();
 
       expect(spy).toHaveBeenCalled();
+
     });
   });
 });

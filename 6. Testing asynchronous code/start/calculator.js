@@ -55,7 +55,13 @@ Calculator.prototype.divide = function (number) {
  */
 Object.defineProperty(Calculator.prototype, 'version', {
   get: function () {
-    return '0.1';
+    return fetch('https://gist.githubusercontent.com/juanlizarazo/4b2d229ba483ca13b1a6d7bf3079dc8b/raw/228ac05e04118037be02c38d9b86945c1356a2e2/version.json')
+      .then((response)=>{
+        return response.json()
+      })
+      .then((json)=>{
+        return json.version;
+      });
   },
   enumerable: true,
   configurable: true
