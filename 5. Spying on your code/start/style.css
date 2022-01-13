@@ -1,21 +1,21 @@
 .body {
-  font-family: 'Roboto', sans-serif;
-  background: #455A64;
+  font-family: "Roboto", sans-serif;
+  background: #455a64;
 }
 
 .title {
   text-align: center;
   text-transform: uppercase;
-  color: #818F95;
+  color: #818f95;
   font-size: 52px;
 }
 
 .input,
 .result-container {
   width: 100%;
-  color: #455A64;
-  background: #818F95;
-  border: solid 1px #FFF;
+  color: #455a64;
+  background: #818f95;
+  border: solid 1px #fff;
   font-size: 48px;
   padding: 2px;
   text-align: center;
@@ -30,4 +30,11 @@
   font-size: 18px;
   color: #000;
   text-align: center;
+}
+
+.version {
+  color: white;
+  margin-top: 50px;
+  text-align: center;
+  font-style: italic;
 }

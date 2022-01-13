@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Simple calculator</title>
@@ -9,22 +10,23 @@
 
   <script src="calculator.js"></script>
   <script src="main.js"></script>
+  <script> window.onload = function () {
+      showVersion();
+    };</script>
 </head>
+
 <body class="body">
   <h1 class="title">Simple calculator</h1>
 
-  <input
-    class="input"
-    type="text"
-    title="calculator"
-    placeholder="Enter operation"
-    value="1+2"
-    onchange="calculate(this.value)"
-  />
+  <input class="input" type="text" title="calculator" placeholder="Enter operation" value="1+2"
+    onchange="calculate(this.value)" />
 
   <div class="result-container">
     <div class="title">Result</div>
     <span id="result">3</span>
   </div>
+
+  <div class="version">Version <span id="version"></span></div>
 </body>
+
 </html>
