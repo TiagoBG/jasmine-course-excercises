@@ -1,0 +1,23 @@
+{
+  "name": "start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "author": "Santiago Betancur Graciano",
+  "license": "ISC",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "jasmine-core": "^4.0.0",
+    "karma": "^6.3.10",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-cli": "^2.0.0",
+    "karma-coverage": "^2.1.0",
+    "karma-jasmine": "^4.0.1",
+    "karma-jasmine-matchers": "^4.0.2",
+    "puppeteer": "^13.0.1"
+  },
+  "dependencies": {}
+}
